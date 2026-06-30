@@ -11,7 +11,7 @@ import { Gallery } from "@/components/site/Gallery";
 import { VideoStories } from "@/components/site/VideoStories";
 import { GetInvolved } from "@/components/site/GetInvolved";
 import { Donate } from "@/components/site/Donate";
-import { Partners } from "@/components/site/Partners";
+// import { Partners } from "@/components/site/Partners";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -50,7 +50,7 @@ function Index() {
         <VideoStories />
         <GetInvolved />
         <Donate />
-        <Partners />
+        {/* <Partners /> */}
       </main>
       <Footer />
     </div>

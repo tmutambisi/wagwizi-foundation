@@ -6,7 +6,7 @@ const timeline = [
   { year: "2019", text: "Wagwizi is founded with a first school feeding programme." },
   { year: "2021", text: "Healthcare outreach reaches its first ten rural districts." },
   { year: "2023", text: "Youth skills academies and borehole projects expand nationwide." },
-  { year: "2025", text: "Over 48,000 lives impacted across 64 communities." },
+  { year: "2025", text: "Programmes expand nationwide, transforming communities across Zimbabwe." },
 ];
 
 const values = [
