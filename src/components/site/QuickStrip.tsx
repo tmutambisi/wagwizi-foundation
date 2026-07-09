@@ -5,9 +5,7 @@ const items = [
   {
     label: "Children Supported",
     end: 12500,
-    icon: (
-      <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0" />
-    ),
+    icon: <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0" />,
   },
   {
     label: "Scholarships",
@@ -56,7 +54,15 @@ export function QuickStrip() {
               className="reveal flex flex-col items-center text-center"
             >
               <span className="flex size-14 items-center justify-center rounded-2xl bg-secondary text-forest">
-                <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="size-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   {it.icon}
                 </svg>
               </span>

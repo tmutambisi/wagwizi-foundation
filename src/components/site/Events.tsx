@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { useScrollReveal } from "@/hooks/use-reveal";
 import flyer from "@/assets/event-launch-flyer.png";
 
@@ -6,7 +7,6 @@ const event = {
   title: "Wagwizi Community Foundation Launch",
   date: "2026-07-11T18:00:00",
   place: "The Exchange at The Country Club",
-  type: "Foundation Launch",
 };
 
 function useCountdown(target: string) {
@@ -36,70 +36,133 @@ export function Events() {
   const cd = useCountdown(event.date);
 
   return (
-    <section id="events" ref={ref} className="bg-background py-20 lg:py-32">
+    <section id="events" ref={ref} className="bg-secondary py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div data-reveal className="reveal max-w-xl">
-          <p className="eyebrow text-terracotta">Mark your calendar</p>
-          <h2 className="mt-3 text-4xl text-foreground lg:text-5xl">Upcoming event</h2>
+        {/* Header */}
+        <div
+          data-reveal
+          className="reveal flex flex-wrap items-end justify-between gap-4 border-b border-border pb-8"
+        >
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+              Upcoming Event
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-foreground sm:text-4xl">
+              Foundation Launch
+            </h2>
+          </div>
+          <Link
+            to="/events"
+            className="text-sm font-semibold text-forest hover:underline"
+          >
+            View All Events →
+          </Link>
         </div>
 
+        {/* Event card — horizontal layout */}
         <div className="mt-12 grid items-center gap-10 lg:grid-cols-2">
-          {/* Flyer — used as-is, no overlay */}
-          <div data-reveal className="reveal overflow-hidden rounded-3xl shadow-xl">
+          {/* Flyer */}
+          <div data-reveal className="reveal overflow-hidden rounded-xl shadow-lg">
             <img
               src={flyer}
-              alt="Wagwizi Community Foundation Launch — Saturday 11 July 2026, The Exchange at The Country Club, with a live performance by Jah Prayzah & 3G the Band"
+              alt="Wagwizi Community Foundation Launch — Saturday 11 July 2026"
               loading="lazy"
               className="size-full object-contain"
             />
           </div>
 
           {/* Details */}
-          <div data-reveal className="reveal">
-            <span className="rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wider text-forest-deep">
-              {event.type}
-            </span>
-            <h3 className="mt-5 font-display text-3xl text-foreground lg:text-4xl">{event.title}</h3>
-            <p className="mt-3 flex items-center gap-2 text-muted-foreground">
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth={1.6}><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 9h18M8 3v4M16 3v4" /></svg>
-              Saturday, {fmt(event.date)} · 6PM–11PM
-            </p>
-            <p className="mt-2 flex items-center gap-2 text-muted-foreground">
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth={1.6}><path d="M12 21c5-3.5 8-7 8-11a8 8 0 0 0-16 0c0 4 3 7.5 8 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>
-              {event.place}
-            </p>
-            <p className="mt-6 max-w-md text-muted-foreground">
-              A black-tie launch ceremony with a full live performance by Jah Prayzah &amp; 3G the Band.
-              Dinner included. Individual tickets $100 · Priority table (seats 10) $1000.
-              All proceeds support the work of the Wagwizi Community Foundation.
-            </p>
+          <div data-reveal className="reveal space-y-6">
+            <h3 className="font-display text-2xl font-bold text-foreground lg:text-3xl">
+              {event.title}
+            </h3>
+            <div className="flex flex-col gap-1 text-muted-foreground">
+              <p className="font-semibold text-foreground">Saturday, {fmt(event.date)} · 6PM–11PM</p>
+              <p>{event.place} · Black-Tie Event</p>
+            </div>
 
-            <div className="mt-7 flex gap-3">
+            {/* Countdown */}
+            <div className="flex gap-3">
               {[
                 { v: cd.d, l: "Days" },
                 { v: cd.h, l: "Hrs" },
                 { v: cd.m, l: "Min" },
                 { v: cd.s, l: "Sec" },
               ].map((u) => (
-                <div key={u.l} className="rounded-xl bg-forest px-4 py-3 text-center text-cream">
-                  <p className="font-display text-2xl tabular-nums">{String(u.v).padStart(2, "0")}</p>
-                  <p className="text-[0.6rem] uppercase tracking-wider text-cream/70">{u.l}</p>
+                <div
+                  key={u.l}
+                  className="rounded-lg bg-forest-deep px-4 py-3 text-center text-cream"
+                >
+                  <p className="font-display text-xl tabular-nums">
+                    {String(u.v).padStart(2, "0")}
+                  </p>
+                  <p className="text-[0.6rem] uppercase tracking-wider text-cream/60">{u.l}</p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-6 text-sm text-muted-foreground">
-              Tickets at <span className="font-semibold text-foreground">www.sahwigate.com</span> &amp; JP Studios ·
-              Bookings: Shylet +263 77 697 1656
-            </p>
-            <a
-              href="https://www.sahwigate.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full bg-gold px-6 py-3 text-sm font-semibold text-forest-deep transition-colors hover:bg-gold-soft"
-            >
-              Get Tickets
-            </a>
+            {/* FAQ cards */}
+            <div className="space-y-3 rounded-2xl border border-border bg-card p-5">
+              <p className="text-xs font-bold uppercase tracking-widest text-forest">
+                Frequently Asked Questions
+              </p>
+              <div className="space-y-4 divide-y divide-border text-sm">
+                <div className="pt-3">
+                  <p className="font-semibold text-foreground">Is this a normal Jah Prayzah show?</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    No. This is the official Wagwizi Community Foundation Launch — a formal evening
+                    with dinner, speeches, and then a full live performance by Jah Prayzah &amp; 3G
+                    the Band.
+                  </p>
+                </div>
+                <div className="pt-3">
+                  <p className="font-semibold text-foreground">
+                    What do the ticket proceeds go towards?
+                  </p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    All proceeds support the work of Wagwizi Community Foundation, whose focus is
+                    community impact — especially supporting women, vulnerable families, the girl
+                    child, and young people affected by drug and substance abuse.
+                  </p>
+                </div>
+                <div className="pt-3">
+                  <p className="font-semibold text-foreground">
+                    How do I buy tickets or book a table?
+                  </p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    Individual tickets ($100) are available on{" "}
+                    <a
+                      href="https://www.sahwigate.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-forest hover:underline"
+                    >
+                      SahwiGate
+                    </a>{" "}
+                    and at JP Studios. Priority tables (seats 10) at $1,000 are available
+                    exclusively at JP Studios.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA row */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href="https://www.sahwigate.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-gold px-6 py-3 text-sm font-bold text-forest-deep transition-colors hover:bg-gold-soft"
+              >
+                Get Tickets on SahwiGate
+              </a>
+              <a
+                href="tel:+263776971656"
+                className="text-sm font-semibold text-forest hover:underline"
+              >
+                Enquiries: +263 77 697 1656
+              </a>
+            </div>
           </div>
         </div>
       </div>

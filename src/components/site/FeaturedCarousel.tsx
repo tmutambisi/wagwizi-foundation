@@ -8,12 +8,48 @@ import borehole from "@/assets/outreach-wheelchair.jpg";
 import girls from "@/assets/founder-baby.jpg";
 
 const slides = [
-  { img: school, name: "Education Support", location: "Zimbabwe", desc: "Scholarships, school supplies and learning resources so children learn with dignity.", beneficiaries: "Learners supported" },
-  { img: medical, name: "Healthcare & Welfare", location: "Harare", desc: "Caring for vulnerable children, mothers and the elderly across communities.", beneficiaries: "Families reached" },
-  { img: borehole, name: "Mobility & Relief", location: "Rural Zimbabwe", desc: "Wheelchairs, essentials and home deliveries for those who need them most.", beneficiaries: "Homes served" },
-  { img: youth, name: "Youth Empowerment", location: "Harare", desc: "Helping young artists and producers launch careers and fighting drug abuse.", beneficiaries: "Young people" },
-  { img: food, name: "Food & Supplies Distribution", location: "Zimbabwe", desc: "Food hampers and essentials shared with disadvantaged communities.", beneficiaries: "Communities" },
-  { img: girls, name: "Children & the Girl Child", location: "Zimbabwe", desc: "Protecting the rights of children and supporting the girl child.", beneficiaries: "Children" },
+  {
+    img: school,
+    name: "Education Support",
+    location: "Zimbabwe",
+    desc: "Scholarships, school supplies and learning resources so children learn with dignity.",
+    beneficiaries: "Learners supported",
+  },
+  {
+    img: medical,
+    name: "Healthcare & Welfare",
+    location: "Harare",
+    desc: "Caring for vulnerable children, mothers and the elderly across communities.",
+    beneficiaries: "Families reached",
+  },
+  {
+    img: borehole,
+    name: "Mobility & Relief",
+    location: "Rural Zimbabwe",
+    desc: "Wheelchairs, essentials and home deliveries for those who need them most.",
+    beneficiaries: "Homes served",
+  },
+  {
+    img: youth,
+    name: "Youth Empowerment",
+    location: "Harare",
+    desc: "Helping young artists and producers launch careers and fighting drug abuse.",
+    beneficiaries: "Young people",
+  },
+  {
+    img: food,
+    name: "Food & Supplies Distribution",
+    location: "Zimbabwe",
+    desc: "Food hampers and essentials shared with disadvantaged communities.",
+    beneficiaries: "Communities",
+  },
+  {
+    img: girls,
+    name: "Children & the Girl Child",
+    location: "Zimbabwe",
+    desc: "Protecting the rights of children and supporting the girl child.",
+    beneficiaries: "Children",
+  },
 ];
 
 export function FeaturedCarousel() {
@@ -40,14 +76,30 @@ export function FeaturedCarousel() {
               aria-label="Previous projects"
               className="flex size-12 items-center justify-center rounded-full border border-cream/30 text-cream transition-colors hover:border-gold hover:text-gold"
             >
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth={1.8}><path d="M15 18l-6-6 6-6" /></svg>
+              <svg
+                viewBox="0 0 24 24"
+                className="size-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.8}
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
             </button>
             <button
               onClick={() => scrollBy(1)}
               aria-label="Next projects"
               className="flex size-12 items-center justify-center rounded-full border border-cream/30 text-cream transition-colors hover:border-gold hover:text-gold"
             >
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth={1.8}><path d="M9 6l6 6-6 6" /></svg>
+              <svg
+                viewBox="0 0 24 24"
+                className="size-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.8}
+              >
+                <path d="M9 6l6 6-6 6" />
+              </svg>
             </button>
           </div>
         </div>
@@ -73,7 +125,16 @@ export function FeaturedCarousel() {
             <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/30 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-7">
               <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                <svg viewBox="0 0 24 24" className="size-3.5" fill="none" stroke="currentColor" strokeWidth={2}><path d="M12 21c5-3.5 8-7 8-11a8 8 0 0 0-16 0c0 4 3 7.5 8 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="size-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path d="M12 21c5-3.5 8-7 8-11a8 8 0 0 0-16 0c0 4 3 7.5 8 11Z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
                 {s.location}
               </p>
               <h3 className="mt-2 font-display text-2xl text-cream">{s.name}</h3>
@@ -86,7 +147,15 @@ export function FeaturedCarousel() {
                 </span>
                 <span className="flex items-center gap-1 text-sm font-semibold text-gold">
                   Read Story
-                  <svg viewBox="0 0 24 24" className="size-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="size-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </div>
             </div>

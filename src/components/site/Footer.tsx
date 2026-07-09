@@ -1,10 +1,10 @@
 const quickLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Programmes", href: "#programmes" },
-  { label: "Impact Stories", href: "#impact" },
-  { label: "Events", href: "#events" },
-  { label: "News", href: "#news" },
-  { label: "Get Involved", href: "#involved" },
+  { label: "About Us", href: "/#about" },
+  { label: "Programmes", href: "/programmes" },
+  { label: "Impact Stories", href: "/impact" },
+  { label: "Events", href: "/events" },
+  { label: "Get Involved", href: "/get-involved" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 import logo from "@/assets/logo.jpg";
@@ -38,12 +38,11 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <div>
             <h3 className="font-display text-2xl text-cream">Stay close to the work.</h3>
-            <p className="mt-1 text-sm text-cream/70">Stories from the field, delivered monthly. No noise.</p>
+            <p className="mt-1 text-sm text-cream/70">
+              Stories from the field, delivered monthly. No noise.
+            </p>
           </div>
-          <form
-            className="flex w-full max-w-md gap-3"
-            onSubmit={(e) => e.preventDefault()}
-          >
+          <form className="flex w-full max-w-md gap-3" onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"
               required
@@ -63,17 +62,22 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <span className="flex size-11 items-center justify-center overflow-hidden rounded-full bg-cream">
-              <img src={logo} alt="Wagwizi Community Foundation logo" className="size-full object-contain" />
+              <img
+                src={logo}
+                alt="Wagwizi Community Foundation logo"
+                className="size-full object-contain"
+              />
             </span>
             <span className="leading-tight">
-              <span className="block font-display text-xl">Wagwizi</span>
-              <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold/90">Community Foundation</span>
+              <span className="block font-display text-xl tracking-widest">WAGWIZI</span>
+              <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold/90">
+                COMMUNITY FOUNDATION
+              </span>
             </span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream/70">
-            Transforming lives across Zimbabwe through education, healthcare, youth
-            empowerment, arts and sustainable community development — with dignity
-            at the centre.
+            Transforming lives across Zimbabwe through education, healthcare, youth empowerment,
+            arts and sustainable community development — with dignity at the centre.
           </p>
           <div className="mt-6 flex gap-3">
             {socials.map((s) => (
@@ -96,7 +100,12 @@ export function Footer() {
           <ul className="mt-5 space-y-3">
             {quickLinks.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="text-sm text-cream/75 transition-colors hover:text-gold">{l.label}</a>
+                <a
+                  href={l.href}
+                  className="text-sm text-cream/75 transition-colors hover:text-gold"
+                >
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -106,12 +115,20 @@ export function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-wider text-gold">Contact</h4>
           <ul className="mt-5 space-y-3 text-sm text-cream/75">
             <li>
-              <span className="block text-[0.65rem] font-semibold uppercase tracking-wider text-cream/50">Mobile</span>
-              <a href="tel:+263776971656" className="hover:text-gold">077 697 1656</a>
+              <span className="block text-[0.65rem] font-semibold uppercase tracking-wider text-cream/50">
+                Mobile
+              </span>
+              <a href="tel:+263776971656" className="hover:text-gold">
+                077 697 1656
+              </a>
             </li>
             <li>
-              <span className="block text-[0.65rem] font-semibold uppercase tracking-wider text-cream/50">Email address</span>
-              <a href="mailto:wagwizifoundation@gmail.com" className="hover:text-gold">wagwizifoundation@gmail.com</a>
+              <span className="block text-[0.65rem] font-semibold uppercase tracking-wider text-cream/50">
+                Email address
+              </span>
+              <a href="mailto:wagwizifoundation@gmail.com" className="hover:text-gold">
+                wagwizifoundation@gmail.com
+              </a>
             </li>
           </ul>
         </div>

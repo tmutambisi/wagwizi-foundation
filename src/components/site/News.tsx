@@ -4,9 +4,28 @@ import b from "@/assets/student-microscope.png";
 import c from "@/assets/mother-child.jpg";
 
 const articles = [
-  { title: "How a single classroom changed an entire village", cat: "Education", date: "12 June 2026", read: "6 min read", img: a, lead: true },
-  { title: "Inside our largest medical outreach yet", cat: "Healthcare", date: "28 May 2026", read: "4 min read", img: c },
-  { title: "Meet the young carpenters building their futures", cat: "Youth", date: "9 May 2026", read: "5 min read", img: b },
+  {
+    title: "Girls Education Programme expands to 12 rural districts",
+    cat: "Education",
+    date: "June 24, 2026",
+    read: "6 min read",
+    img: a,
+    lead: true,
+  },
+  {
+    title: "Healthcare outreach team reaches 10 rural districts",
+    cat: "Healthcare",
+    date: "June 10, 2026",
+    read: "4 min read",
+    img: c,
+  },
+  {
+    title: "Youth Skills Academy: carpentry and music graduates launch careers",
+    cat: "Youth",
+    date: "May 15, 2026",
+    read: "5 min read",
+    img: b,
+  },
 ];
 
 export function News() {
@@ -19,7 +38,9 @@ export function News() {
             <p className="eyebrow text-terracotta">From the field</p>
             <h2 className="mt-3 text-4xl text-foreground lg:text-5xl">Latest stories</h2>
           </div>
-          <a href="#" className="text-sm font-semibold text-terracotta hover:underline">All articles →</a>
+          <a href="#" className="text-sm font-semibold text-terracotta hover:underline">
+            All articles →
+          </a>
         </div>
 
         <div className="mt-12 grid gap-7 lg:grid-cols-2">
@@ -30,23 +51,42 @@ export function News() {
             className="reveal group block overflow-hidden rounded-3xl bg-card shadow-sm transition-shadow hover:shadow-2xl"
           >
             <div className="aspect-16/10 overflow-hidden">
-              <img src={articles[0].img} alt={articles[0].title} width={1280} height={800} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img
+                src={articles[0].img}
+                alt={articles[0].title}
+                width={1280}
+                height={800}
+                loading="lazy"
+                className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
             <div className="p-8">
               <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-wider">
-                <span className="rounded-full bg-forest px-3 py-1 text-cream">{articles[0].cat}</span>
-                <span className="text-muted-foreground">{articles[0].date} · {articles[0].read}</span>
+                <span className="rounded-full bg-forest px-3 py-1 text-cream">
+                  {articles[0].cat}
+                </span>
+                <span className="text-muted-foreground">
+                  {articles[0].date} · {articles[0].read}
+                </span>
               </div>
               <h3 className="mt-4 font-display text-3xl leading-tight text-foreground transition-colors group-hover:text-terracotta">
                 {articles[0].title}
               </h3>
               <p className="mt-3 text-muted-foreground">
-                A look at how investing in one community ripples outward — from
-                attendance to harvests to hope.
+                A look at how investing in girls' education builds stronger communities, supporting
+                over 510 students with scholarships and mentorship.
               </p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta">
                 Read more
-                <svg viewBox="0 0 24 24" className="size-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="size-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
               </span>
             </div>
           </a>
@@ -62,11 +102,20 @@ export function News() {
                 className="reveal group flex flex-1 gap-5 overflow-hidden rounded-3xl bg-card p-4 shadow-sm transition-shadow hover:shadow-lg"
               >
                 <div className="w-36 shrink-0 overflow-hidden rounded-2xl sm:w-44">
-                  <img src={art.img} alt={art.title} width={400} height={500} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img
+                    src={art.img}
+                    alt={art.title}
+                    width={400}
+                    height={500}
+                    loading="lazy"
+                    className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
                 <div className="flex flex-col justify-center py-2 pr-3">
                   <div className="flex flex-wrap items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-wider">
-                    <span className="rounded-full bg-secondary px-2.5 py-0.5 text-forest">{art.cat}</span>
+                    <span className="rounded-full bg-secondary px-2.5 py-0.5 text-forest">
+                      {art.cat}
+                    </span>
                     <span className="text-muted-foreground">{art.read}</span>
                   </div>
                   <h3 className="mt-2 font-display text-xl leading-snug text-foreground transition-colors group-hover:text-terracotta">

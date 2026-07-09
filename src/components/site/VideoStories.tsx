@@ -14,8 +14,8 @@ export function VideoStories() {
           <p className="eyebrow text-gold">Watch</p>
           <h2 className="mt-3 text-4xl text-cream lg:text-5xl">Watch our story</h2>
           <p className="mt-4 text-cream/75">
-            Honest moments from the field — see the Wagwizi Community Foundation
-            and founder Jah Prayzah at work in our communities.
+            Honest moments from the field — see the Wagwizi Community Foundation and founder Jah
+            Prayzah at work in our communities.
           </p>
         </div>
 
@@ -37,9 +37,7 @@ export function VideoStories() {
               <p className="text-xs font-semibold uppercase tracking-wider text-gold">
                 Featured · Jah Prayzah
               </p>
-              <h3 className="mt-2 font-display text-2xl text-cream">
-                A message from our founder
-              </h3>
+              <h3 className="mt-2 font-display text-2xl text-cream">A message from our founder</h3>
             </div>
           </div>
 
@@ -55,12 +53,8 @@ export function VideoStories() {
               />
             </div>
             <div className="p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gold">
-                Outreach
-              </p>
-              <h3 className="mt-2 font-display text-2xl text-cream">
-                Harare Children's Home
-              </h3>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gold">Outreach</p>
+              <h3 className="mt-2 font-display text-2xl text-cream">Harare Children's Home</h3>
             </div>
           </div>
         </div>

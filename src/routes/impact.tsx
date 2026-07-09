@@ -1,0 +1,45 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { ImpactStats } from "@/components/site/ImpactStats";
+import { FeaturedCarousel } from "@/components/site/FeaturedCarousel";
+import { ImpactStory } from "@/components/site/ImpactStory";
+import { Footer } from "@/components/site/Footer";
+
+export const Route = createFileRoute("/impact")({
+  head: () => ({
+    meta: [
+      { title: "Impact — Wagwizi Community Foundation" },
+      {
+        name: "description",
+        content:
+          "See the real impact of Wagwizi Community Foundation: 510 girls enrolled, 94% retention, 12 districts reached, and countless lives transformed.",
+      },
+    ],
+  }),
+  component: ImpactPage,
+});
+
+function ImpactPage() {
+  return (
+    <div className="bg-background">
+      <Navbar />
+      <main className="pt-20">
+        <div className="bg-forest-deep py-20 text-center text-cream lg:py-28">
+          <div className="mx-auto max-w-3xl px-6">
+            <p className="eyebrow text-gold">By the numbers</p>
+            <h1 className="mt-4 font-display text-5xl font-extrabold text-cream lg:text-6xl">
+              Our Impact
+            </h1>
+            <p className="mt-5 text-lg leading-relaxed text-cream/80">
+              Every metric is a life. Every story is proof that communities can rise.
+            </p>
+          </div>
+        </div>
+        <ImpactStats />
+        {/* <FeaturedCarousel /> */}
+        {/* <ImpactStory /> */}
+      </main>
+      <Footer />
+    </div>
+  );
+}

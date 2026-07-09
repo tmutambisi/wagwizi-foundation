@@ -3,10 +3,23 @@ import aboutImg from "@/assets/founder-baby.jpg";
 import cultureImg from "@/assets/mother-child.jpg";
 
 const timeline = [
-  { year: "2019", text: "Wagwizi is founded with a first school feeding programme." },
-  { year: "2021", text: "Healthcare outreach reaches its first ten rural districts." },
-  { year: "2023", text: "Youth skills academies and borehole projects expand nationwide." },
-  { year: "2025", text: "Programmes expand nationwide, transforming communities across Zimbabwe." },
+  {
+    year: "2019",
+    text: "School feeding program launched, establishing our commitment to children.",
+  },
+  {
+    year: "2021",
+    text: "Healthcare outreach expanded significantly, reaching ten rural districts.",
+  },
+  { year: "2023", text: "Nationwide youth skills academies and borehole projects implemented." },
+  {
+    year: "2025",
+    text: "Broader transformation achieved with community programs across Zimbabwe.",
+  },
+  {
+    year: "2026",
+    text: "Rebranding to Wagwizi Community Foundation, shifting to a community-driven movement.",
+  },
 ];
 
 const values = [
@@ -48,26 +61,33 @@ export function About() {
               A foundation born from a simple belief — that no community should rise alone.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Founded by Zimbabwean musician Jah Prayzah and originally registered
-              as the Mukudzeyi Mukombe Foundation, we rebranded to the Wagwizi
-              Community Foundation to reflect a shift from a founder-centred
-              identity to a broader, community-driven movement. Our guiding motto
-              is "Kubatirana kwezvanza, kurerutsa ndima" — working together
-              lightens the load.
+              Founded by Zimbabwean musician Jah Prayzah and originally registered as the Mukudzeyi
+              Mukombe Foundation, we rebranded to the Wagwizi Community Foundation in June 2026 to
+              reflect a shift from a founder-centred identity to a broader, community-driven
+              movement. Our guiding motto is &ldquo;Kubatirana kwezvanza, kurerutsa ndima&rdquo; —
+              working together lightens the load.
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <div className="rounded-2xl border border-border bg-card p-5">
                 <h3 className="text-lg text-forest">Our Mission</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  To transform lives through education, healthcare, and
-                  sustainable opportunity — delivered with dignity.
+                  To transform lives through education, healthcare, and sustainable opportunity —
+                  delivered with dignity.
                 </p>
               </div>
               <div className="rounded-2xl border border-border bg-card p-5">
                 <h3 className="text-lg text-forest">Our Vision</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Thriving, self-reliant Zimbabwean communities where every child
-                  can dream without limits.
+                  Thriving, self-reliant Zimbabwean communities where every child can dream without
+                  limits.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-5 sm:col-span-2">
+                <h3 className="text-lg text-forest">Official Registration</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Registered as a Private Voluntary Organisation under the Private Voluntary
+                  Organisations Act [Chapter 17:05], Registration No.{" "}
+                  <span className="font-semibold text-foreground">PVO 123/26</span>.
                 </p>
               </div>
             </div>
@@ -82,7 +102,7 @@ export function About() {
               Years of patient, faithful work.
             </h2>
           </div>
-          <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
             {timeline.map((t, i) => (
               <div
                 key={t.year}
@@ -103,9 +123,8 @@ export function About() {
             <p className="eyebrow text-terracotta">What guides us</p>
             <h2 className="mt-3 text-3xl text-foreground sm:text-4xl">Core values</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded by Zimbabwean musician and philanthropist Jah Prayzah, the
-              foundation keeps people — not headlines — at the centre of every
-              decision.
+              Founded by Zimbabwean musician and philanthropist Jah Prayzah, the foundation keeps
+              people — not headlines — at the centre of every decision.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">

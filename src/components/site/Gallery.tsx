@@ -8,11 +8,19 @@ import g5 from "@/assets/outreach-wheelchair.jpg";
 import g6 from "@/assets/founder-portrait.jpg";
 
 const photos = [
-  { src: g1, cat: "Community", alt: "Jah Prayzah greeting a mother and her baby at a foundation event" },
+  {
+    src: g1,
+    cat: "Community",
+    alt: "Jah Prayzah greeting a mother and her baby at a foundation event",
+  },
   { src: g2, cat: "Education", alt: "A student using a microscope in science class" },
   { src: g3, cat: "Community", alt: "A volunteer sharing a joyful moment with a mother and child" },
   { src: g4, cat: "Events", alt: "The team handing over food and supplies to a community" },
-  { src: g5, cat: "Health", alt: "Volunteers delivering a wheelchair and supplies to a rural home" },
+  {
+    src: g5,
+    cat: "Health",
+    alt: "Volunteers delivering a wheelchair and supplies to a rural home",
+  },
   { src: g6, cat: "Volunteers", alt: "Foundation members at a community outreach" },
 ];
 
@@ -82,9 +90,21 @@ export function Gallery() {
             aria-label="Close image"
             onClick={() => setLightbox(null)}
           >
-            <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth={1.8}><path d="M6 6l12 12M18 6L6 18" /></svg>
+            <svg
+              viewBox="0 0 24 24"
+              className="size-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+            >
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
           </button>
-          <img src={lightbox} alt="" className="max-h-[85vh] max-w-full rounded-2xl object-contain shadow-2xl" />
+          <img
+            src={lightbox}
+            alt=""
+            className="max-h-[85vh] max-w-full rounded-2xl object-contain shadow-2xl"
+          />
         </div>
       )}
     </section>

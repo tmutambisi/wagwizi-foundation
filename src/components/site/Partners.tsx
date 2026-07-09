@@ -1,14 +1,14 @@
 import { useScrollReveal } from "@/hooks/use-reveal";
 
 const partners = [
-  "Ministry of Education",
-  "ZimHealth Trust",
-  "Sunrise Bank",
+  "Gill, Godlonton & Gerrans",
+  "Willdale Limited",
+  "Ministry of Public Service, Labour & Social Welfare",
+  "JP Studios",
+  "Sahwigate Ticketing",
   "Econet Foundation",
   "UNICEF Zimbabwe",
-  "Harare City Council",
-  "GreenLeaf NGO",
-  "African Sun Group",
+  "Harare Children's Home",
 ];
 
 export function Partners() {
