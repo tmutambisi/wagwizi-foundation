@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useScrollReveal } from "@/hooks/use-reveal";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import emailjs from "@emailjs/browser";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -19,6 +21,31 @@ export const Route = createFileRoute("/contact")({
 
 function ContactSection() {
   const ref = useScrollReveal<HTMLDivElement>();
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("idle");
+
+    try {
+      await emailjs.sendForm(
+        "service_bv1hb6m",
+        "template_t4mghfo",
+        e.currentTarget,
+        "g9P3YoLc3M9B_GUd1"
+      );
+      setStatus("success");
+      e.currentTarget.reset();
+    } catch (err) {
+      console.error("EmailJS Error:", err);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section ref={ref} className="bg-background py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -146,18 +173,7 @@ function ContactSection() {
 
               <form
                 className="mt-8 space-y-5"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const form = e.target as HTMLFormElement;
-                  const data = new FormData(form);
-                  const subject = encodeURIComponent(
-                    `Wagwizi Foundation — ${data.get("subject") || "Enquiry"}`,
-                  );
-                  const body = encodeURIComponent(
-                    `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nCategory: ${data.get("category")}\n\n${data.get("message")}`,
-                  );
-                  window.location.href = `mailto:wagwizifoundation@gmail.com?subject=${subject}&body=${body}`;
-                }}
+                onSubmit={handleSubmit}
               >
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
@@ -250,14 +266,29 @@ function ContactSection() {
                   />
                 </div>
 
+                {status === "success" && (
+                  <div className="rounded-xl bg-green-50 p-4 text-sm text-green-800 border border-green-200">
+                    Thank you! Your message has been sent successfully. We will get back to you shortly.
+                  </div>
+                )}
+                {status === "error" && (
+                  <div className="rounded-xl bg-red-50 p-4 text-sm text-red-800 border border-red-200">
+                    Oops! Something went wrong. Please try again or email us directly at{" "}
+                    <a href="mailto:wagwizifoundation@gmail.com" className="font-semibold underline">
+                      wagwizifoundation@gmail.com
+                    </a>.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-gold py-4 text-sm font-bold text-forest-deep shadow-lg transition-all hover:bg-gold-soft hover:shadow-xl"
+                  disabled={loading}
+                  className="w-full rounded-full bg-gold py-4 text-sm font-bold text-forest-deep shadow-lg transition-all hover:bg-gold-soft hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {loading ? "Sending Message..." : "Send Message"}
                 </button>
                 <p className="text-center text-xs text-muted-foreground">
-                  This will open your email client. Alternatively, email us directly at{" "}
+                  Alternatively, email us directly at{" "}
                   <a
                     href="mailto:wagwizifoundation@gmail.com"
                     className="font-medium text-forest hover:underline"
