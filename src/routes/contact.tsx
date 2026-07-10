@@ -26,6 +26,7 @@ function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setLoading(true);
     setStatus("idle");
 
@@ -33,13 +34,13 @@ function ContactSection() {
       await emailjs.sendForm(
         "service_bv1hb6m",
         "template_t4mghfo",
-        e.currentTarget,
+        form,
         {
           publicKey: "g9P3YoLc3M9B_GUd1",
         }
       );
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       console.error("EmailJS Error:", err);
       setStatus("error");
