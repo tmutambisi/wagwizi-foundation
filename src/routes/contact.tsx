@@ -34,7 +34,9 @@ function ContactSection() {
         "service_bv1hb6m",
         "template_t4mghfo",
         e.currentTarget,
-        "g9P3YoLc3M9B_GUd1"
+        {
+          publicKey: "g9P3YoLc3M9B_GUd1",
+        }
       );
       setStatus("success");
       e.currentTarget.reset();
