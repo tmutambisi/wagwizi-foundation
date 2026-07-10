@@ -35,15 +35,26 @@ export function Navbar() {
       : "bg-transparent"
     : "bg-forest-deep shadow-[0_4px_24px_rgba(0,0,0,0.15)]";
 
+  const handleBrandClick = (e: React.MouseEvent) => {
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${navBg}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link
           to="/"
+          onClick={handleBrandClick}
           className="group flex items-center gap-3"
           aria-label="Wagwizi Community Foundation home"
         >
-          <span className="flex size-10 items-center justify-center overflow-hidden rounded-full bg-cream">
+          <span className="flex size-10 items-center justify-center overflow-hidden rounded-full bg-cream transition-transform duration-300 group-hover:scale-105">
             <img
               src={logo}
               alt="Wagwizi Community Foundation logo"
@@ -51,8 +62,8 @@ export function Navbar() {
             />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-lg tracking-widest text-cream">WAGWIZI</span>
-            <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold/90">
+            <span className="block font-display text-lg tracking-widest text-cream transition-colors duration-300 group-hover:text-gold">WAGWIZI</span>
+            <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold/90 transition-colors duration-300 group-hover:text-gold-soft">
               COMMUNITY FOUNDATION
             </span>
           </span>

@@ -29,7 +29,7 @@ const leaders: Leader[] = [
   {
     name: "Shylet Ndarambwa",
     role: "Secretary",
-    bio: "For bookings and enquiries, contact Shylet on +263 77 697 1656.",
+
   },
   {
     name: "Keen Mushapaidze",

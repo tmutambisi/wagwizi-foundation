@@ -4,24 +4,18 @@ const cards = [
   {
     title: "Volunteer",
     desc: "Give your time and skills on the ground or behind the scenes.",
-    icon: <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0" />,
   },
   {
     title: "Donate",
     desc: "Fund a scholarship, a clinic day or clean water for a village.",
-    icon: <path d="M12 21c5-3.5 8-7 8-11a8 8 0 0 0-16 0c0 4 3 7.5 8 11Z" />,
   },
   {
     title: "Partner",
     desc: "Join us as an NGO, school or community organisation.",
-    icon: (
-      <path d="M16 11a4 4 0 1 0-4-4M8 11a4 4 0 1 1 4-4M2 21a6 6 0 0 1 12 0M10 21a6 6 0 0 1 12 0" />
-    ),
   },
   {
     title: "Corporate Sponsorship",
     desc: "Align your brand with measurable, transparent impact.",
-    icon: <path d="M3 21V9l6-4 6 4v12M9 21v-5h3v5M15 13h6v8" />,
   },
 ];
 
@@ -45,28 +39,15 @@ export function GetInvolved() {
               href="#donate"
               data-reveal
               style={{ transitionDelay: `${i * 90}ms` }}
-              className="reveal group relative overflow-hidden rounded-3xl bg-card p-8 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:bg-forest hover:shadow-2xl"
+              className="reveal group relative overflow-hidden rounded-3xl bg-forest p-8 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:bg-forest-deep hover:shadow-2xl"
             >
-              <span className="flex size-14 items-center justify-center rounded-2xl bg-secondary text-forest transition-colors group-hover:bg-gold group-hover:text-forest-deep">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="size-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  {c.icon}
-                </svg>
-              </span>
-              <h3 className="mt-6 text-2xl text-forest transition-colors group-hover:text-cream">
+              <h3 className="text-2xl text-cream transition-colors">
                 {c.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors group-hover:text-cream/80">
+              <p className="mt-3 text-sm leading-relaxed text-cream/80 transition-colors">
                 {c.desc}
               </p>
-              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta transition-colors group-hover:text-gold">
+              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-gold transition-colors group-hover:text-gold-soft">
                 Learn more
                 <svg
                   viewBox="0 0 24 24"

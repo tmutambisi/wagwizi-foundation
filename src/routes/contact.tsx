@@ -27,11 +27,11 @@ function ContactSection() {
           <div data-reveal className="reveal">
             <p className="eyebrow text-terracotta">Talk to us</p>
             <h2 className="mt-4 text-balance text-4xl leading-tight text-foreground lg:text-5xl">
-              We&rsquo;d love to hear from you.
+              We would love to hear from you.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Whether you&rsquo;re a potential donor, corporate partner, volunteer, or just want to
-              learn more about our work — our doors are always open. Reach out and join the
+              Whether you are a donor, corporate partner, volunteer, or just want to
+              learn more about our work, our doors are always open. Reach out and join the
               movement.
             </p>
 
@@ -141,7 +141,7 @@ function ContactSection() {
             <div className="rounded-3xl border border-border bg-card p-8 shadow-sm lg:p-10">
               <h3 className="text-2xl text-foreground">Send us a message</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                We&rsquo;ll get back to you within 48 hours.
+                <i> We will get back to you within 48 hours.</i>
               </p>
 
               <form
@@ -213,6 +213,7 @@ function ContactSection() {
                     <option>Media / Press</option>
                     <option>Events & Tickets</option>
                     <option>General Enquiry</option>
+                    <option>Other</option>
                   </select>
                 </div>
 
@@ -244,7 +245,7 @@ function ContactSection() {
                     name="message"
                     required
                     rows={5}
-                    placeholder="Tell us how you'd like to get involved or how we can help..."
+                    placeholder="Tell us how you would like to get involved or how we can help..."
                     className="mt-2 w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-forest focus:ring-1 focus:ring-forest"
                   />
                 </div>
@@ -280,7 +281,7 @@ function ContactPage() {
       <main className="pt-20">
         <div className="bg-forest-deep py-20 text-center text-cream lg:py-28">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="eyebrow text-gold">We're here</p>
+            <p className="eyebrow text-gold">We are here</p>
             <h1 className="mt-4 font-display text-5xl font-extrabold text-cream lg:text-6xl">
               Contact Us
             </h1>

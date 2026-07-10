@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useScrollReveal } from "@/hooks/use-reveal";
-import education from "@/assets/student-microscope.png";
-import healthcare from "@/assets/mother-child.jpg";
-import youth from "@/assets/founder-portrait.jpg";
-import culture from "@/assets/founder-baby.jpg";
+import education from "@/assets/education.jpg";
+import healthcare from "@/assets/healthcare.jpg";
+import youth from "@/assets/youth-empowerment.jpg";
+import culture from "@/assets/arts-and-ent.jpg";
 import community from "@/assets/outreach-wheelchair.jpg";
 import food from "@/assets/food-distribution.jpg";
+
 
 const programmes = [
   {

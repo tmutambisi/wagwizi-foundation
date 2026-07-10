@@ -64,7 +64,7 @@ export function About() {
               Founded by Zimbabwean musician Jah Prayzah and originally registered as the Mukudzeyi
               Mukombe Foundation, we rebranded to the Wagwizi Community Foundation in June 2026 to
               reflect a shift from a founder-centred identity to a broader, community-driven
-              movement. Our guiding motto is &ldquo;Kubatirana kwezvanza, kurerutsa ndima&rdquo; —
+              movement. Our guiding motto is &ldquo;<b>KUBATIRANA KWEZVANZA, KURERUTSA NDIMA</b>&rdquo; —
               working together lightens the load.
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">

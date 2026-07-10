@@ -44,10 +44,10 @@ export function FounderMessage() {
 
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
-                Music has always been my way of connecting with people. But early on, I realized
+                Music has always been my way of connecting with people. But early on, I realised
                 that the real work is about the communities that inspired my songs. When we started
-                in 2019, it was about school feeding programs. Over the years, we've expanded to
-                healthcare academies and borehole projects across Zimbabwe.
+                in <b>2019</b>, it was about school feeding programs. Over the years, we have expanded to
+                healthcare, academies and borehole projects across Zimbabwe.
               </p>
               <p>
                 Rebranding to the{" "}
@@ -73,7 +73,7 @@ export function FounderMessage() {
                 </div>
                 {/* Stylized digital signature */}
                 <div className="font-serif text-3xl font-bold tracking-wider text-gold select-none transform -rotate-3 border-b-2 border-gold/40 pb-1 w-fit">
-                  JPrayzah
+                  Jah Prayzah
                 </div>
               </div>
             </div>

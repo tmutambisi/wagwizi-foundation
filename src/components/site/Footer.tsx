@@ -1,13 +1,13 @@
 const quickLinks = [
-  { label: "About Us", href: "/#about" },
-  { label: "Programmes", href: "/programmes" },
-  { label: "Impact Stories", href: "/impact" },
-  { label: "Events", href: "/events" },
-  { label: "Get Involved", href: "/get-involved" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "ABOUT US", href: "/#about" },
+  { label: "PROGRAMMES", href: "/programmes" },
+  { label: "IMPACT STORIES", href: "/impact" },
+  { label: "EVENTS", href: "/events" },
+  { label: "GET INVOLVED", href: "/get-involved" },
+  { label: "CONTACT US", href: "/contact" },
 ];
 
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/wagwizi-logo.png";
 
 const socials = [
   {
@@ -31,6 +31,13 @@ const socials = [
 ];
 
 export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="bg-forest-deep text-cream">
       {/* Newsletter band */}
@@ -60,8 +67,12 @@ export function Footer() {
       {/* Main */}
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-10">
         <div>
-          <div className="flex items-center gap-3">
-            <span className="flex size-11 items-center justify-center overflow-hidden rounded-full bg-cream">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-3 text-left focus:outline-none cursor-pointer group"
+            aria-label="Scroll to top"
+          >
+            <span className="flex size-11 items-center justify-center overflow-hidden rounded-full bg-cream transition-transform duration-300 group-hover:scale-105">
               <img
                 src={logo}
                 alt="Wagwizi Community Foundation logo"
@@ -69,15 +80,15 @@ export function Footer() {
               />
             </span>
             <span className="leading-tight">
-              <span className="block font-display text-xl tracking-widest">WAGWIZI</span>
-              <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold/90">
+              <span className="block font-display text-xl tracking-widest transition-colors duration-300 group-hover:text-gold">WAGWIZI</span>
+              <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold/90 transition-colors duration-300 group-hover:text-gold-soft">
                 COMMUNITY FOUNDATION
               </span>
             </span>
-          </div>
+          </button>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream/70">
             Transforming lives across Zimbabwe through education, healthcare, youth empowerment,
-            arts and sustainable community development — with dignity at the centre.
+            arts and sustainable community development with dignity at the centre.
           </p>
           <div className="mt-6 flex gap-3">
             {socials.map((s) => (
@@ -138,7 +149,7 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-xs text-cream/55 sm:flex-row sm:items-center sm:justify-between lg:px-10">
           <p>© {new Date().getFullYear()} Wagwizi Community Foundation. All rights reserved.</p>
           <p>
-            Developed by{" "}
+            Developed and Mantained by{" "}
             <a
               href="https://tungasonic.co.zw"
               target="_blank"

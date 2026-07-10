@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import heroImg1 from "@/assets/hero.jpeg";
-import heroImg2 from "@/assets/hero3.jpg";
+import heroImg2 from "@/assets/hero3.jpeg";
 import heroImg3 from "@/assets/hero2.jpg";
 
 const slides = [
@@ -20,15 +20,10 @@ const slides = [
 
 export function Hero() {
   const [current, setCurrent] = useState(0);
-  const [fading, setFading] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFading(true);
-      setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % slides.length);
-        setFading(false);
-      }, 600);
+      setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -36,24 +31,29 @@ export function Hero() {
   return (
     <section id="top" className="relative w-full overflow-hidden">
       {/* Full-width hero slideshow */}
-      <div className="relative h-[65svh] w-full lg:h-[80svh]">
-        {/* Slides */}
-        {slides.map((slide, i) => (
-          <img
-            key={slide.src}
-            src={slide.src}
-            alt={slide.alt}
-            width={1920}
-            height={1280}
-            fetchPriority={i === 0 ? "high" : "auto"}
-            decoding="async"
-            className={`absolute inset-0 size-full object-cover object-top transition-opacity duration-700 ${i === current && !fading ? "opacity-100" : "opacity-0"
-              }`}
-          />
-        ))}
+      <div className="relative h-[65svh] w-full lg:h-[80svh] overflow-hidden">
+        {/* Slides Wrapper for sliding animation */}
+        <div
+          className="flex h-full w-full transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {slides.map((slide, i) => (
+            <div key={slide.src} className="relative h-full w-full shrink-0">
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                width={1920}
+                height={1280}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                decoding="async"
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent pointer-events-none" />
 
         {/* Slide indicator dots */}
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 lg:bottom-20 z-10">
@@ -62,11 +62,7 @@ export function Hero() {
               key={i}
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => {
-                setFading(true);
-                setTimeout(() => {
-                  setCurrent(i);
-                  setFading(false);
-                }, 300);
+                setCurrent(i);
               }}
               className={`h-1.5 rounded-full transition-all duration-400 ${i === current ? "bg-gold w-6" : "bg-white/40 w-1.5 hover:bg-white/60"
                 }`}
