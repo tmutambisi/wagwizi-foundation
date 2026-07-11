@@ -9,6 +9,7 @@ import { FeaturedCarousel } from "@/components/site/FeaturedCarousel";
 import { ImpactStory } from "@/components/site/ImpactStory";
 import { Programmes } from "@/components/site/Programmes";
 import { Events } from "@/components/site/Events";
+import { VideoStories } from "@/components/site/VideoStories";
 import { GetInvolved } from "@/components/site/GetInvolved";
 import { Donate } from "@/components/site/Donate";
 import { Footer } from "@/components/site/Footer";
@@ -50,6 +51,7 @@ function Index() {
         {/* <ImpactStory /> */}
         <Programmes />
         <Events />
+        <VideoStories />
         {/* News section removed because they are not real stories */}
         {/* Partners section frozen for now */}
         {/* <Partners /> */}

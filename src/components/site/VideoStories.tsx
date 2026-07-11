@@ -1,9 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-reveal";
 
-const FB_VIDEO =
-  "https://www.facebook.com/plugins/video.php?height=476&href=" +
-  encodeURIComponent("https://www.facebook.com/share/r/1BNWWZVrQP/") +
-  "&show_text=false&width=560&t=0";
+const HARARE_VIDEO =
+  "https://www.youtube.com/embed/459AOykFLRo?rel=0&modestbranding=1&playsinline=1&showinfo=0";
 
 export function VideoStories() {
   const ref = useScrollReveal<HTMLDivElement>();
@@ -19,32 +17,11 @@ export function VideoStories() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-7 lg:grid-cols-[1.5fr_1fr]">
+        <div className="mt-12">
           <div data-reveal className="reveal overflow-hidden rounded-3xl bg-charcoal shadow-2xl">
             <div className="aspect-video w-full">
               <iframe
-                src={FB_VIDEO}
-                title="Jah Prayzah — Wagwizi Community Foundation"
-                className="size-full"
-                style={{ border: "none", overflow: "hidden" }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              />
-            </div>
-            <div className="p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gold">
-                Featured · Jah Prayzah
-              </p>
-              <h3 className="mt-2 font-display text-2xl text-cream">A message from our founder</h3>
-            </div>
-          </div>
-
-          <div data-reveal className="reveal overflow-hidden rounded-3xl bg-charcoal shadow-2xl">
-            <div className="aspect-video w-full">
-              <iframe
-                src="https://www.youtube.com/embed/459AOykFLRo?rel=0&modestbranding=1&playsinline=1&showinfo=0"
+                src={HARARE_VIDEO}
                 title="Wagwizi Community Foundation — Harare Children's Home Christmas Visit"
                 className="size-full"
                 style={{ border: "none" }}
@@ -53,10 +30,13 @@ export function VideoStories() {
               />
             </div>
             <div className="p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gold">Outreach · Christmas Visit</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+                Outreach · Christmas Visit
+              </p>
               <h3 className="mt-2 font-display text-2xl text-cream">Harare Children's Home</h3>
               <p className="mt-2 text-sm text-cream/60">
-                Wagwizi Community Foundation visits the Harare Children's Home to bring joy and support during the Christmas season.
+                Wagwizi Community Foundation visits the Harare Children's Home to bring joy and
+                support during the Christmas season.
               </p>
             </div>
           </div>
