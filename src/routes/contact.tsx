@@ -12,9 +12,21 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with the Wagwizi Community Foundation. Reach out to us for donations, partnerships, volunteering, corporate sponsorship or media enquiries.",
+          "Get in touch with the Wagwizi Community Foundation in Harare. Reach out to us for online donation support, partnerships, volunteering, corporate sponsorship, or media enquiries.",
       },
+      { property: "og:title", content: "Contact Us — Wagwizi Community Foundation" },
+      {
+        property: "og:description",
+        content:
+          "Contact Jah Prayzah's foundation. Send a message, call, or visit our office to learn how you can support our initiatives in Zimbabwe.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Contact Us — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Contact our team to partner, volunteer, or donate." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/contact" }
+    ]
   }),
   component: ContactPage,
 });

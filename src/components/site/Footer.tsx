@@ -40,29 +40,7 @@ export function Footer() {
 
   return (
     <footer className="bg-forest-deep text-cream">
-      {/* Newsletter band */}
-      <div className="border-b border-cream/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <div>
-            <h3 className="font-display text-2xl text-cream">Stay close to the work.</h3>
-            <p className="mt-1 text-sm text-cream/70">
-              Stories from the field, delivered monthly. No noise.
-            </p>
-          </div>
-          <form className="flex w-full max-w-md gap-3" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              required
-              placeholder="Your email address"
-              aria-label="Email address"
-              className="w-full rounded-full border border-cream/20 bg-cream/5 px-5 py-3 text-sm text-cream outline-none placeholder:text-cream/50 focus:border-gold"
-            />
-            <button className="shrink-0 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-forest-deep transition-colors hover:bg-gold-soft">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
+
 
       {/* Main */}
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-10">

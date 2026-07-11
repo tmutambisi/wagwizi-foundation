@@ -46,7 +46,7 @@ export function FounderMessage() {
               <p>
                 Music has always been my way of connecting with people. But early on, I realised
                 that the real work is about the communities that inspired my songs. When we started
-                in <b>2019</b>, it was about school feeding programs. Over the years, we have expanded to
+                in <b>2025</b>, it was about school feeding programs. Since then, we have expanded to
                 healthcare, academies and borehole projects across Zimbabwe.
               </p>
               <p>

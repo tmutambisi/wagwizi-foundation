@@ -7,37 +7,36 @@ import culture from "@/assets/arts-and-ent.jpg";
 import community from "@/assets/outreach-wheelchair.jpg";
 import food from "@/assets/food-distribution.jpg";
 
-
 const programmes = [
   {
-    title: "Education",
+    title: "Education & The Girl Child",
     img: education,
-    desc: "Scholarships, school uniforms, and supplies. 510 girls enrolled with a 94% retention rate across 12 districts.",
+    desc: "Securing scholarships, school uniforms, and learning supplies to ensure the girl child and children from vulnerable families stay in school.",
   },
   {
-    title: "Healthcare & Welfare",
+    title: "Healthcare & Supporting Women",
     img: healthcare,
-    desc: "Essential medical care and welfare outreach to vulnerable children, mothers, and the elderly in 10 rural districts.",
+    desc: "Providing essential medical care, maternal health support, and wellness services to empower women and mothers in rural areas.",
   },
   {
-    title: "Youth Empowerment",
+    title: "Youth & Substance Abuse Support",
     img: youth,
-    desc: "Vocational skills academies for young artists and carpenters, while actively combating drug and substance abuse.",
+    desc: "Actively combating drug and substance abuse among young people through mentorship, counseling, and positive rehabilitation paths.",
   },
   {
-    title: "Arts & Culture",
+    title: "Arts, Culture & Youth Mentorship",
     img: culture,
-    desc: "Preserving Zimbabwean cultural heritage, building confidence and critical life skills for youths through art forms.",
+    desc: "Engaging young people in creative arts and cultural heritage to build life skills, confidence, and steer them away from drug abuse.",
   },
   {
-    title: "Community Development",
+    title: "Community Development for Families",
     img: community,
-    desc: "Borehole clean water installations, wheelchair distribution, and community-led infrastructure.",
+    desc: "Providing clean water borehole installations and wheelchair distribution to uplift vulnerable families and children.",
   },
   {
-    title: "Food Security",
+    title: "Food Security for Vulnerable Families",
     img: food,
-    desc: "Critical food hampers and nutritional provisions to families experiencing extreme economic hardship.",
+    desc: "Distributing critical food hampers and nutritional provisions to vulnerable families experiencing extreme hardship.",
   },
 ];
 

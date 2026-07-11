@@ -76,14 +76,13 @@ export function Hero() {
             <p className="mb-3 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-gold sm:text-xs">
               Kubatirana Kwezvanza, Kurerutsa Ndima
             </p>
-            <h1 className="max-w-[720px] font-display text-[1.75rem] font-extrabold uppercase leading-[1.08] text-white sm:text-[2.5rem] lg:text-[3.25rem]">
-              Empowering communities
-              <br className="hidden sm:block" />
-              across Zimbabwe
+            <h1 className="max-w-[720px] font-display text-[1.35rem] font-extrabold uppercase leading-[0.95] text-white sm:text-[2.5rem] sm:leading-[1.08] lg:text-[3.25rem]">
+              <span className="block sm:inline">Empowering communities</span>{" "}
+              <span className="mt-1 block sm:mt-0 sm:inline">across Zimbabwe</span>
             </h1>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/80 sm:text-base">
               Founded by Jah Prayzah — transforming lives through education,
-              healthcare &amp; sustainable development since 2019.
+              healthcare &amp; sustainable development since 2025.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -91,12 +90,6 @@ export function Hero() {
                 className="rounded-full bg-gold px-6 py-3 text-sm font-bold text-forest-deep shadow-lg transition-all hover:scale-105 hover:shadow-xl"
               >
                 Donate Now
-              </a>
-              <a
-                href="#about"
-                className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-gold hover:bg-white/20"
-              >
-                Our Story
               </a>
             </div>
           </div>

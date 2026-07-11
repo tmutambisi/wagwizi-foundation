@@ -7,13 +7,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/news")({
   head: () => ({
     meta: [
-      { title: "News — Wagwizi Community Foundation" },
+      { title: "Latest News & Outreaches — Wagwizi Community Foundation" },
       {
         name: "description",
         content:
-          "The latest news and stories from the field at Wagwizi Community Foundation, covering Education, Healthcare, Youth Empowerment, and Community Development.",
+          "Read updates, press releases, and stories from the field on education, healthcare, and youth initiatives run by the Wagwizi Community Foundation.",
       },
+      { property: "og:title", content: "Latest News & Outreaches — Wagwizi Community Foundation" },
+      {
+        property: "og:description",
+        content:
+          "Keep up with the latest news, stories of hope, and development work from the Wagwizi Community Foundation in Zimbabwe.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Latest News & Outreaches — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Updates and stories from the field in Zimbabwe." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/news" }
+    ]
   }),
   component: NewsPage,
 });

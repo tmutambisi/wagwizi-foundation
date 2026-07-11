@@ -72,38 +72,58 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+import logo from "../assets/wagwizi-logo.png";
+import hero from "../assets/hero.jpeg";
+
+const getAbsoluteUrl = (path: string) => {
+  if (!path) return "https://wagwizifoundation.org/assets/wagwizi-logo.png";
+  if (path.startsWith("http")) return path;
+  return `https://wagwizifoundation.org${path.startsWith("/") ? "" : "/"}${path}`;
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Wagwizi Community Foundation — Together We Rise" },
-      {
-        name: "description",
-        content:
-          "Wagwizi Community Foundation transforms lives across Zimbabwe through education, healthcare, youth empowerment, arts and sustainable community development.",
-      },
-      { name: "author", content: "Wagwizi Community Foundation" },
-      { name: "theme-color", content: "#0E802E" },
-      { property: "og:title", content: "Wagwizi Community Foundation" },
-      {
-        property: "og:description",
-        content:
-          "Building stronger Zimbabwean communities through education, healthcare, youth empowerment and sustainable opportunities.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap",
-      },
-    ],
-  }),
+  head: () => {
+    const ogImg = getAbsoluteUrl(hero);
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { title: "Wagwizi Community Foundation — Together We Rise" },
+        {
+          name: "description",
+          content:
+            "Wagwizi Community Foundation transforms lives across Zimbabwe through education, healthcare, youth empowerment, arts and sustainable community development.",
+        },
+        { name: "author", content: "Wagwizi Community Foundation" },
+        { name: "theme-color", content: "#0E802E" },
+        { name: "robots", content: "index, follow, max-image-preview:large" },
+        { property: "og:title", content: "Wagwizi Community Foundation — Together We Rise" },
+        {
+          property: "og:description",
+          content:
+            "Building stronger Zimbabwean communities through education, healthcare, youth empowerment and sustainable opportunities.",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: ogImg },
+        { property: "og:site_name", content: "Wagwizi Community Foundation" },
+        { property: "og:locale", content: "en_ZW" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Wagwizi Community Foundation — Together We Rise" },
+        { name: "twitter:description", content: "Transforming lives across Zimbabwe." },
+        { name: "twitter:image", content: ogImg },
+      ],
+      links: [
+        { rel: "stylesheet", href: appCss },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap",
+        },
+        { rel: "canonical", href: "https://wagwizifoundation.org/" },
+      ],
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

@@ -6,13 +6,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/programmes")({
   head: () => ({
     meta: [
-      { title: "Programmes — Wagwizi Community Foundation" },
+      { title: "Our Programmes — Supporting Women & Girls in Zimbabwe" },
       {
         name: "description",
         content:
-          "Explore the six interconnected pillars of the Wagwizi Community Foundation: Education, Healthcare, Youth Empowerment, Arts & Culture, Community Development, and Food Security.",
+          "Explore the six core programmes of the Wagwizi Community Foundation: Education & The Girl Child, Healthcare & Supporting Women, Youth & Substance Abuse Support, Arts, Culture & Youth Mentorship, Community Development, and Food Security for Families.",
       },
+      { property: "og:title", content: "Our Programmes — Supporting Women & Girls in Zimbabwe" },
+      {
+        property: "og:description",
+        content:
+          "Discover how the Wagwizi Community Foundation supports the girl child, empowers women, installs boreholes, provides food security, and aids youth affected by substance abuse.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Our Programmes — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Explore our six core programmes of community support." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/programmes" }
+    ]
   }),
   component: ProgrammesPage,
 });

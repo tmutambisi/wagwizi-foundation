@@ -9,13 +9,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Wagwizi Community Foundation" },
+      { title: "About Us — Wagwizi Community Foundation | Jah Prayzah NGO" },
       {
         name: "description",
         content:
-          "Learn about the Wagwizi Community Foundation, our mission, vision, core values, and our journey of transforming lives across Zimbabwe since 2019.",
+          "Learn about the Wagwizi Community Foundation, founded by Mukudzeyi Mukombe (Jah Prayzah) in 2025. Discover our mission, values, and core registration as PVO 123/26 in Zimbabwe.",
       },
+      { property: "og:title", content: "About Us — Wagwizi Community Foundation | Jah Prayzah NGO" },
+      {
+        property: "og:description",
+        content:
+          "Discover our mission to transform lives across Zimbabwe through community-driven education, healthcare, and youth initiatives.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "About Us — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Learn about our mission and values." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/about" }
+    ]
   }),
   component: AboutPage,
 });
@@ -33,7 +45,7 @@ function AboutPage() {
               About Us
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-cream/80">
-              Founded in 2019. Rebranded in 2026. Always community-first.
+              Founded in 2025. Rebranded in 2026. Always community-first.
             </p>
           </div>
         </div>

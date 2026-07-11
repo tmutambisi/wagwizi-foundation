@@ -2,25 +2,7 @@ import { useScrollReveal } from "@/hooks/use-reveal";
 import aboutImg from "@/assets/founder-baby.jpg";
 import cultureImg from "@/assets/mother-child.jpg";
 
-const timeline = [
-  {
-    year: "2019",
-    text: "School feeding program launched, establishing our commitment to children.",
-  },
-  {
-    year: "2021",
-    text: "Healthcare outreach expanded significantly, reaching ten rural districts.",
-  },
-  { year: "2023", text: "Nationwide youth skills academies and borehole projects implemented." },
-  {
-    year: "2025",
-    text: "Broader transformation achieved with community programs across Zimbabwe.",
-  },
-  {
-    year: "2026",
-    text: "Rebranding to Wagwizi Community Foundation, shifting to a community-driven movement.",
-  },
-];
+
 
 const values = [
   { title: "Dignity", text: "We serve every person with respect, never charity for its own sake." },
@@ -94,28 +76,7 @@ export function About() {
           </div>
         </div>
 
-        {/* Timeline */}
-        <div className="mt-24 lg:mt-32">
-          <div data-reveal className="reveal mb-12 max-w-xl">
-            <p className="eyebrow text-terracotta">Our journey</p>
-            <h2 className="mt-3 text-3xl text-foreground sm:text-4xl">
-              Years of patient, faithful work.
-            </h2>
-          </div>
-          <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
-            {timeline.map((t, i) => (
-              <div
-                key={t.year}
-                data-reveal
-                style={{ transitionDelay: `${i * 90}ms` }}
-                className="reveal bg-card p-7"
-              >
-                <p className="font-display text-3xl text-gold">{t.year}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         {/* Values */}
         <div className="mt-24 grid gap-10 lg:mt-32 lg:grid-cols-[0.8fr_1.2fr]">

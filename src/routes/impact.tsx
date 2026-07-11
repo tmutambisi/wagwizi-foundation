@@ -8,13 +8,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/impact")({
   head: () => ({
     meta: [
-      { title: "Impact — Wagwizi Community Foundation" },
+      { title: "Our Impact — Empowering Communities Across Zimbabwe" },
       {
         name: "description",
         content:
-          "See the real impact of Wagwizi Community Foundation: 510 girls enrolled, 94% retention, 12 districts reached, and countless lives transformed.",
+          "See the real impact of the Wagwizi Community Foundation: school feeding programs, healthcare outreach, clean water boreholes, and youth empowerment across Zimbabwe.",
       },
+      { property: "og:title", content: "Our Impact — Empowering Communities Across Zimbabwe" },
+      {
+        property: "og:description",
+        content:
+          "Explore impact statistics and stories from the field showing how Wagwizi Community Foundation transforms lives in vulnerable communities.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Our Impact — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Read our statistics and stories of real community impact." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/impact" }
+    ]
   }),
   component: ImpactPage,
 });

@@ -1,5 +1,10 @@
 import { useScrollReveal } from "@/hooks/use-reveal";
 import JP from "@/assets/fouunder-jp.jpg";
+import BM from "@/assets/brian.jpeg";
+import NM from "@/assets/nigel.jpg";
+import SN from "@/assets/shylet.jpeg";
+import KM from "@/assets/keen.jpeg";
+
 
 
 type Leader = {
@@ -16,24 +21,29 @@ const leaders: Leader[] = [
     role: "Founder & Donor",
     badge: "Jah Prayzah",
     photo: JP,
-    bio: "Zimbabwean recording artist and humanitarian Mukudzeyi Mukombe — known worldwide as Jah Prayzah — founded the Wagwizi Community Foundation in 2019 with the belief that every community deserves the opportunity to thrive. His vision and generosity continue to drive every programme the foundation delivers.",
+    bio: "Zimbabwean recording artist and humanitarian Mukudzeyi Mukombe — known worldwide as Jah Prayzah — founded the Wagwizi Community Foundation in 2025 with the belief that every community deserves the opportunity to thrive. His vision and generosity continue to drive every programme the foundation delivers.",
   },
   {
     name: "Brian Mataruka",
     role: "Chairman",
+    photo: BM,
+
   },
   {
     name: "Nigel Mushapaidze",
     role: "Vice Chairman",
+    photo: NM,
+
   },
   {
     name: "Shylet Ndarambwa",
     role: "Secretary",
-
+    photo: SN,
   },
   {
     name: "Keen Mushapaidze",
     role: "Treasurer",
+    photo: KM,
   },
 ];
 

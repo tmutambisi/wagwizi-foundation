@@ -7,13 +7,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
     meta: [
-      { title: "Get Involved — Wagwizi Community Foundation" },
+      { title: "Get Involved — Volunteer, Donate & Partner with Wagwizi" },
       {
         name: "description",
         content:
-          "Join the Wagwizi Community Foundation movement. Volunteer, donate, partner, or sponsor our work to transform lives across Zimbabwe.",
+          "Join the Wagwizi Community Foundation movement. Support our work to transform lives across Zimbabwe through volunteering, online donations, or corporate partnerships.",
       },
+      { property: "og:title", content: "Get Involved — Volunteer, Donate & Partner with Wagwizi" },
+      {
+        property: "og:description",
+        content:
+          "Support Jah Prayzah's foundation. Learn about opportunities to donate, volunteer, sponsor, or partner with the Wagwizi Community Foundation.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Get Involved — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Join our movement and support our work in Zimbabwe." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/get-involved" }
+    ]
   }),
   component: GetInvolvedPage,
 });

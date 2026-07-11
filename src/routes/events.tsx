@@ -6,13 +6,25 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Events — Wagwizi Community Foundation" },
+      { title: "Events & Launch Ceremony — Wagwizi Community Foundation" },
       {
         name: "description",
         content:
-          "Stay up to date with Wagwizi Community Foundation events, including our black-tie launch ceremony on 11 July 2026 at The Exchange, The Country Club.",
+          "Stay up to date with Wagwizi Community Foundation charity events, outreaches, and details of our official launch ceremony on 11 July 2026.",
       },
+      { property: "og:title", content: "Events & Launch Ceremony — Wagwizi Community Foundation" },
+      {
+        property: "og:description",
+        content:
+          "Join our upcoming charity events and outreaches. Keep track of the Wagwizi Community Foundation calendar.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Events & Launch Ceremony — Wagwizi Community Foundation" },
+      { name: "twitter:description", content: "Check out our calendar of charity events and outreaches." },
     ],
+    links: [
+      { rel: "canonical", href: "https://wagwizifoundation.org/events" }
+    ]
   }),
   component: EventsPage,
 });
