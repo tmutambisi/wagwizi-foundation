@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react";
-import heroImg1 from "@/assets/food-distribution.jpg";
-import heroImg2 from "@/assets/hero3.jpeg";
+import heroImg1 from "@/assets/jp30K.jpg";
+//import heroImg2 from "@/assets/hero3.jpeg";
 import heroImg3 from "@/assets/hero2.jpg";
 
 const slides = [
   {
     src: heroImg1,
-    alt: "Founder Jah Prayzah greeting community members at an outreach event",
+    alt: "Wagwizi foundation getting a donation of 30K",
   },
-  {
-    src: heroImg2,
-    alt: "A young Zimbabwean student focused at a microscope, supported by the foundation",
-  },
+
   {
     src: heroImg3,
-    alt: "Mukudzeyi Mukombe (Jah Prayzah), Founder of the Wagwizi Community Foundation",
+    alt: "Wagwizi Foundation offering help",
   },
 ];
 

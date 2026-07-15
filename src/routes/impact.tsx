@@ -38,16 +38,16 @@ function ImpactPage() {
       <main className="pt-20">
         <div className="bg-forest-deep py-20 text-center text-cream lg:py-28">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="eyebrow text-gold">By the numbers</p>
+            <p className="eyebrow text-gold">Making a difference</p>
             <h1 className="mt-4 font-display text-5xl font-extrabold text-cream lg:text-6xl">
               Our Impact
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-cream/80">
-              Every metric is a life. Every story is proof that communities can rise.
+              Every journey begins with a single step. We have taken ours — and we are just getting started.
             </p>
           </div>
         </div>
-        <ImpactStats />
+        {/* <ImpactStats /> */}
         {/* <FeaturedCarousel /> */}
         {/* <ImpactStory /> */}
       </main>

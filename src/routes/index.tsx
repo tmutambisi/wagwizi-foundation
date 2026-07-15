@@ -6,7 +6,7 @@ import { About } from "@/components/site/About";
 import { FounderMessage } from "@/components/site/FounderMessage";
 import { Leadership } from "@/components/site/Leadership";
 import { FeaturedCarousel } from "@/components/site/FeaturedCarousel";
-import { ImpactStory } from "@/components/site/ImpactStory";
+//import { ImpactStory } from "@/components/site/ImpactStory";
 import { Programmes } from "@/components/site/Programmes";
 import { Events } from "@/components/site/Events";
 import { VideoStories } from "@/components/site/VideoStories";
@@ -17,7 +17,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wagwizi Community Foundation — Together We Rise" },
+      { title: "Wagwizi Community Foundation — Kubatirana Kwezvanza, Kurerutsa Ndima" },
       {
         name: "description",
         content:
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Wagwizi Community Foundation — Together We Rise",
+        content: "Wagwizi Community Foundation — Kubatirana Kwezvanza, Kurerutsa Ndima",
       },
       {
         property: "og:description",
@@ -43,7 +43,7 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
-        <ImpactStats />
+        {/*<ImpactStats />*/}
         <About />
         <FounderMessage />
         <Leadership />

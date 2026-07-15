@@ -2,7 +2,7 @@ import { useScrollReveal } from "@/hooks/use-reveal";
 import JP from "@/assets/fouunder-jp.jpg";
 import BM from "@/assets/brian.jpeg";
 import NM from "@/assets/nigel.jpg";
-import SN from "@/assets/shylet.jpeg";
+import SN from "@/assets/shylett.jpeg";
 import KM from "@/assets/keen.jpeg";
 
 

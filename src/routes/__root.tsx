@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "Wagwizi Community Foundation — Together We Rise" },
+        { title: "Wagwizi Community Foundation — Kubatirana Kwezvanza, Kurerutsa Ndima" },
         {
           name: "description",
           content:
@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { name: "author", content: "Wagwizi Community Foundation" },
         { name: "theme-color", content: "#0E802E" },
         { name: "robots", content: "index, follow, max-image-preview:large" },
-        { property: "og:title", content: "Wagwizi Community Foundation — Together We Rise" },
+        { property: "og:title", content: "Wagwizi Community Foundation — Kubatirana Kwezvanza, Kurerutsa Ndima" },
         {
           property: "og:description",
           content:
@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { property: "og:site_name", content: "Wagwizi Community Foundation" },
         { property: "og:locale", content: "en_ZW" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "Wagwizi Community Foundation — Together We Rise" },
+        { name: "twitter:title", content: "Wagwizi Community Foundation — Kubatirana Kwezvanza, Kurerutsa Ndima" },
         { name: "twitter:description", content: "Transforming lives across Zimbabwe." },
         { name: "twitter:image", content: ogImg },
       ],
@@ -120,7 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap",
         },
-        { rel: "canonical", href: "https://wagwizifoundation.org/" },
+        { rel: "canonical", href: "https://www.wagwizicommunityfoundation.org/" },
       ],
     };
   },
